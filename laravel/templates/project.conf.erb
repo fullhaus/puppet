@@ -1,0 +1,15 @@
+<VirtualHost *:80>
+    ServerName <%= scope.lookupvar("laravel::project_name") %>
+    ServerAlias <%= scope.lookupvar("laravel::all_alias") %>
+    DocumentRoot "/var/www/html/<%= scope.lookupvar("laravel::project_name") %>/public"
+    ErrorLog "/var/log/httpd/<%= scope.lookupvar("laravel::project_name") %>_error.log"
+    CustomLog "/var/log/httpd/<%= scope.lookupvar("laravel::project_name") %>_accesslog" combined
+    SetEnv APPLICATION_ENV "development"
+
+    <Directory /var/www/html/<%= scope.lookupvar("laravel::project_name") %>/public/>
+        DirectoryIndex index.php
+        AllowOverride all
+        Order allow,deny
+        Allow from all
+    </Directory>
+</VirtualHost>
