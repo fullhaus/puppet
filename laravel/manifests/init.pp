@@ -27,6 +27,7 @@
 #
 # Vasyl Mykhailyshyn (fullhaus1991@gmail.com)
 #
+
 class laravel (
     $project_name = 'mymoviedb.local',
     $server_alias = 'www.mymoviedb.local www'
