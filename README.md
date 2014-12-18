@@ -1,1 +1,1 @@
-Puppet Laravel
+Puppet modules
