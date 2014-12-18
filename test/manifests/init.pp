@@ -15,8 +15,8 @@
 class test (
 ) {
 
-  file { '/tmp/test':
-    ensure => file, 
+file { '/tmp/test':
+    ensure => file,
     group  => 'root',
     owner  => 'root',
     mode   => '0750',
