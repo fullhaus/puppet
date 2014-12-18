@@ -17,7 +17,7 @@ class test (
 
 file { '/tmp/test':
     ensure => file,
-asd    group  => 'root',
+    group  => 'root',
     owner  => 'root',
     mode   => '0750',
   }
