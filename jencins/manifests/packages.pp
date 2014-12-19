@@ -4,9 +4,9 @@ class laravel::packages {
     path => ['/bin', '/sbin', '/usr/bin', '/usr/sbin', '/usr/local/bin', '/usr/local/sbin'],
   }
 
-#  Package {
-#    allow_virtual => true,
-#  }
+  Package {
+    allow_virtual => true,
+  }
 
   exec { 'rpm -i https://mirror.webtatic.com/yum/el6/latest.rpm':
     unless => 'rpm -q webtatic-release',
